@@ -7,7 +7,7 @@ library(psych)
 library(PerformanceAnalytics)
 
 #INPUT DATA
-setwd("C:/Users/Binsar G S/OneDrive - Institut Teknologi Bandung/Semester 3/Andat/TUBES/")
+setwd("") # Diisi dengan working directory
 ASIANPAINT <- read_csv("ASIANPAINT.csv")
 datafull <- ASIANPAINT
 # Mengambil baris dan kolom yang diperlukan
