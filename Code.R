@@ -117,13 +117,13 @@ model_arima = arima(data_log, order = c(1,1,1))
 summary(model_arima)
 checkresiduals(model_arima)
 
-# 4. Model otomatis
-model_auto = auto.arima(data_log)
-summary(model_auto)
-checkresiduals(model_auto)
+# 4. ARIMA (1,1,2)
+model_arima2 = arima(data_log, order = c(1,1,2))
+summary(model_arima)
+checkresiduals(model_arima)
 
-# Forecast untuk 7 hari ke depan, misalkan pake model auto
-(prediksi = forecast(model_auto, h = 7))
+# Forecast untuk 7 hari ke depan, menggunakan model ARIMA(0,1,1) yang memiliki galat terkecil
+(prediksi = forecast(model_ima, h = 7))
 date2 = datafull$Date[4237:5314]
 plot(prediksi,main="Grafik VWAP Saham ASIANPAINT", ylab="ln(VWAP)", xlab="Hari",type='solid')
 
